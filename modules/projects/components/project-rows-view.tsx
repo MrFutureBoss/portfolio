@@ -1,5 +1,5 @@
 import { ProjectListItem } from "@/modules/projects/components/project-list-item";
-import type { Project } from "@/types/project";
+import type { Project } from "@/shared/types/project";
 
 interface ProjectRowsViewProps {
   projects: Project[];

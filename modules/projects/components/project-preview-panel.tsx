@@ -2,7 +2,7 @@
 
 import { ExternalLink, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { Project } from "@/types/project";
+import type { Project } from "@/shared/types/project";
 
 interface ProjectPreviewPanelProps {
   project: Project;

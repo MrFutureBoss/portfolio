@@ -1,5 +1,5 @@
 import { ProjectCard } from "@/modules/projects/components/project-card";
-import type { Project } from "@/types/project";
+import type { Project } from "@/shared/types/project";
 
 interface ProjectKanbanViewProps {
   projects: Project[];

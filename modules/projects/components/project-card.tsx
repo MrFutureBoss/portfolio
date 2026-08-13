@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Calendar, Eye } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import type { Project } from "@/types/project";
-import { useLanguage } from "@/components/providers/language-provider";
-import { TRANSLATIONS } from "@/lib/i18n";
+import type { Project } from "@/shared/types/project";
+import { useLanguage } from "@/shared/providers/language-provider";
+import { TRANSLATIONS } from "@/shared/lib/i18n";
 
 interface ProjectCardProps {
   project: Project;
@@ -15,7 +15,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, onPreview }: ProjectCardProps) {
-      const { lang } = useLanguage();
+  const { lang } = useLanguage();
   return (
     <div className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-foreground/20">
       <div className="relative aspect-video w-full overflow-hidden bg-muted">
@@ -49,6 +49,18 @@ export function ProjectCard({ project, onPreview }: ProjectCardProps) {
               {tag}
             </Badge>
           ))}
+          {project.tags.length - 3 > 1 ?
+            <Badge variant="secondary" className="font-normal">
+              {`+ ${project.tags.length - 3} mores`}
+            </Badge>
+            :
+            project.tags.length - 3 === 1 ?
+              <Badge variant="secondary" className="font-normal">
+                + 1 more
+              </Badge>
+              :
+              ''
+          }
         </div>
 
         <div className="mt-auto flex items-center gap-2 pt-2">

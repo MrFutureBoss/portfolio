@@ -5,8 +5,8 @@ import {
   PROJECTS,
   PROJECT_CATEGORIES,
   PROJECT_YEARS,
-} from "@/lib/data/projects";
-import type { Project, ProjectCategory } from "@/types/project";
+} from "@/shared/lib/data/projects";
+import type { Project, ProjectCategory } from "@/shared/types/project";
 import {
   ProjectToolbar,
   type ProjectViewMode,
@@ -14,9 +14,9 @@ import {
 import { ProjectKanbanView } from "@/modules/projects/components/project-kanban-view";
 import { ProjectRowsView } from "@/modules/projects/components/project-rows-view";
 import { ProjectPreviewPanel } from "@/modules/projects/components/project-preview-panel";
-import { cn } from "@/lib/utils";
-import { useLanguage } from "@/components/providers/language-provider";
-import { TRANSLATIONS } from "@/lib/i18n";
+import { cn } from "@/shared/lib/utils";
+import { useLanguage } from "@/shared/providers/language-provider";
+import { TRANSLATIONS } from "@/shared/lib/i18n";
 
 export default function ProjectListView() {
   const { lang } = useLanguage();

@@ -8,8 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Github, Linkedin, Mail } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
-import { TRANSLATIONS } from "@/lib/i18n";
-import { useLanguage } from "../providers/language-provider";
+import { TRANSLATIONS } from "@/shared/lib/i18n";
+import { useLanguage } from "../../providers/language-provider";
 
 const currentYear = new Date().getFullYear();
 

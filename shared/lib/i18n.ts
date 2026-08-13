@@ -4,10 +4,10 @@
 export const TRANSLATIONS = {
     vi: {
         nav: {
-            about: "Giới thiệu",
+            about: "Giới thiệu về tôi",
+            experience: "Kinh nghiệm",
             projects: "Dự án",
             skills: "Kỹ năng",
-            contact: "Liên hệ",
         },
         header: {
             name: "Mai Tu",
@@ -47,15 +47,26 @@ export const TRANSLATIONS = {
             prjSrchNF: "Không tìm thấy dự án phù hợp.",
         },
         button: {
-            detailBtn: "Chi tiết"
+            detailBtn: "Chi tiết",
+            copiedBtn: "Đã sao chép",
+            copyLinkBtn: "Sao chép link",
+            downloadBtn: "Tải xuống"
+        },
+        resume: {
+            cvTitle: "Xem sơ yếu lý lịch",
+            cvGuide: "Xem bản xem trước bên dưới, hoặc tải xuống / chia sẻ tệp."
+        },
+        toast: {
+            copiedSuccess: "Sao chép link thành công",
+            copiedFail: "Sao chép link thất bại"
         }
     },
     en: {
         nav: {
-            about: "About",
+            about: "About me",
+            experience: "Experience",
             projects: "Projects",
             skills: "Skills",
-            contact: "Contact",
         },
         header: {
             name: "Mai Tu",
@@ -95,7 +106,18 @@ export const TRANSLATIONS = {
             prjSrchNF: "No projects found.",
         },
         button: {
-            detailBtn: "Detail"
+            detailBtn: "Detail",
+            copiedBtn: "Copied",
+            copyLinkBtn: "Copy link",
+            downloadBtn: "Download"
+        },
+        resume: {
+            cvTitle: "Resume",
+            cvGuide: "Preview below, or download / share the file."
+        },
+        toast: {
+            copiedSuccess: "Copied link to clipboard",
+            copiedFail: "Couldn't copy link"
         }
     },
 } as const;

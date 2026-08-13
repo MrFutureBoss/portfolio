@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import HomeLayout from "@/layouts/home-layout";
-import { LanguageProvider } from "@/components/providers/language-provider";
+import HomeLayout from "@/shared/layouts/home-layout";
+import { LanguageProvider } from "@/shared/providers/language-provider";
 import { Toaster } from "sonner";
-import { GlobalLoading } from "@/components/loadings/global-loading";
-import { ThemeProvider } from "@/components/providers/theme-provider";
+import { GlobalLoading } from "@/shared/common/global-loading";
+import { ThemeProvider } from "@/shared/providers/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

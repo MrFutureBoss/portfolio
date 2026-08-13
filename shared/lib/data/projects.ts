@@ -1,5 +1,5 @@
-import type { Project, ProjectCategory } from "@/types/project";
-import type { Lang } from "@/lib/i18n";
+import type { Project, ProjectCategory } from "@/shared/types/project";
+import type { Lang } from "@/shared/lib/i18n";
 
 type FilterOption<T extends string> = { value: T; label: string };
 

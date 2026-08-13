@@ -10,10 +10,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { cn } from "@/lib/utils";
-import type { ProjectCategory } from "@/types/project";
-import { useLanguage } from "@/components/providers/language-provider";
-import { TRANSLATIONS } from "@/lib/i18n";
+import { cn } from "@/shared/lib/utils";
+import type { ProjectCategory } from "@/shared/types/project";
+import { useLanguage } from "@/shared/providers/language-provider";
+import { TRANSLATIONS } from "@/shared/lib/i18n";
 
 export type ProjectViewMode = "kanban" | "list";
 

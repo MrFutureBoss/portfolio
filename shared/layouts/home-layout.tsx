@@ -1,5 +1,5 @@
-import HomeHeader from "@/components/common/home-header";
-import HomeFooter from "@/components/common/home-footer";
+import HomeHeader from "@/shared/common/home/home-header";
+import HomeFooter from "@/shared/common/home/home-footer";
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
   return (

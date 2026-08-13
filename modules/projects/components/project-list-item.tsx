@@ -5,7 +5,9 @@ import Link from "next/link";
 import { Calendar, Eye } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import type { Project } from "@/types/project";
+import type { Project } from "@/shared/types/project";
+import { useLanguage } from "@/shared/providers/language-provider";
+import { TRANSLATIONS } from "@/shared/lib/i18n";
 
 interface ProjectListItemProps {
   project: Project;
@@ -13,6 +15,7 @@ interface ProjectListItemProps {
 }
 
 export function ProjectListItem({ project, onPreview }: ProjectListItemProps) {
+  const { lang } = useLanguage();
   return (
     <div className="flex items-center gap-4 rounded-lg border border-border bg-card p-3 transition-colors hover:border-foreground/20">
       <div className="relative h-16 w-24 shrink-0 overflow-hidden rounded-md bg-muted">
@@ -56,7 +59,7 @@ export function ProjectListItem({ project, onPreview }: ProjectListItemProps) {
           </Button>
         )}
         <Button asChild size="sm">
-          <Link href={`/project-detail/${project.slug}`}>Chi tiết</Link>
+          <Link href={`/project-detail/${project.slug}`}>{TRANSLATIONS[lang].button.detailBtn}</Link>
         </Button>
       </div>
     </div>

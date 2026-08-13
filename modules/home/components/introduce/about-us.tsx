@@ -1,8 +1,8 @@
  "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { useLanguage } from "@/components/providers/language-provider";
-import { TRANSLATIONS } from "@/lib/i18n";
+import { useLanguage } from "@/shared/providers/language-provider";
+import { TRANSLATIONS } from "@/shared/lib/i18n";
 
 export default function AboutUs() {
   const { lang } = useLanguage();
