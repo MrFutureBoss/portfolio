@@ -37,10 +37,10 @@ export function ResumeDialog({ open, onOpenChange }: ResumeDialogProps) {
         try {
             await navigator.clipboard.writeText(RESUME_SHARE_LINK)
             setCopied(true)
-            toast.success(`${t.toast.copiedSuccess}`);
+            toast.success(`${t.copy.copiedSuccess}`);
             setTimeout(() => setCopied(false), 2000);
         } catch {
-            toast.error(`${t.toast.copiedFail}`);
+            toast.error(`${t.copy.copiedFail}`);
         }
     }
 

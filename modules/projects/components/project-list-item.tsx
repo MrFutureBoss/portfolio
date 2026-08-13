@@ -44,6 +44,18 @@ export function ProjectListItem({ project, onPreview }: ProjectListItemProps) {
               {tag}
             </Badge>
           ))}
+          {project.tags.length - 4 > 1 ?
+            <Badge variant="secondary" className="font-normal">
+              {`+ ${project.tags.length - 4} mores`}
+            </Badge>
+            :
+            project.tags.length - 4 === 1 ?
+              <Badge variant="secondary" className="font-normal">
+                + 1 more
+              </Badge>
+              :
+              ''
+          }
         </div>
       </div>
 

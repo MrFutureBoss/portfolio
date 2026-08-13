@@ -20,7 +20,10 @@ export const TRANSLATIONS = {
             addressLabel: "Địa chỉ",
             addressDetail: "180 Phố Vọng, phường Tương Mai, tp Hà Nội",
             emailLabel: "Email",
-            phoneLabel: "Số điện thoại",
+            phoneLabel: "Số điện thoại (+Zalo)",
+            githubLabel: "GitHub",
+            facebookLabel: "Facebook",
+            LinkedinLabel: "Linkedin"
         },
         about: {
             badge: "Giới thiệu",
@@ -30,9 +33,15 @@ export const TRANSLATIONS = {
             description: "Mình tập trung vào việc xây dựng các sản phẩm web hiện đại, dễ dùng và có trải nghiệm người dùng tốt.",
         },
         copy: {
+            copiedSuccess: "Sao chép link thành công",
+            copiedFail: "Sao chép link thất bại",
             mailCopiedDesciption: "đã được sao chép.",
             mailCopied: "Đã sao chép mail!",
             mailCopiedFail: "Sao chép mail thất bại!",
+            itemCopied: "Đã sao chép!",
+            itemCopiedDesc: "đã được sao chép vào bộ nhớ tạm.",
+            allCopied: "Đã sao chép tất cả!",
+            allCopiedDesc: "Toàn bộ thông tin liên hệ đã được sao chép.",
         },
         placeholder: {
             /** Project search placeholder */
@@ -50,15 +59,16 @@ export const TRANSLATIONS = {
             detailBtn: "Chi tiết",
             copiedBtn: "Đã sao chép",
             copyLinkBtn: "Sao chép link",
-            downloadBtn: "Tải xuống"
+            downloadBtn: "Tải xuống",
+            copyAllBtn: "Sao chép tất cả",
         },
         resume: {
             cvTitle: "Xem sơ yếu lý lịch",
             cvGuide: "Xem bản xem trước bên dưới, hoặc tải xuống / chia sẻ tệp."
         },
-        toast: {
-            copiedSuccess: "Sao chép link thành công",
-            copiedFail: "Sao chép link thất bại"
+        switch: {
+            lang: "Ngôn ngữ",
+            theme: "Giao diện"
         }
     },
     en: {
@@ -77,9 +87,12 @@ export const TRANSLATIONS = {
         contact: {
             contactTitle: "Contact information",
             addressLabel: "Address",
-            addressDetail: "180 Phố Vọng, phường Tương Mai, tp Hà Nội",
+            addressDetail: "Street 180 Pho Vong, Hanoi, Vietnam",
             emailLabel: "Email",
-            phoneLabel: "Phone",
+            phoneLabel: "Phone (+Zalo)",
+            githubLabel: "GitHub",
+            facebookLabel: "Facebook",
+            LinkedinLabel: "Linkedin"
         },
         about: {
             badge: "About me",
@@ -89,9 +102,15 @@ export const TRANSLATIONS = {
             description: "I focus on building modern, user-friendly web products with great user experience.",
         },
         copy: {
+            copiedSuccess: "Copied link to clipboard",
+            copiedFail: "Couldn't copy link",
             mailCopiedDesciption: "has been copied to your clipboard.",
             mailCopied: "Mail copied!",
             mailCopiedFail: "Failed to copy email!",
+            itemCopied: "Copied!",
+            itemCopiedDesc: "has been copied to clipboard.",
+            allCopied: "Copied all!",
+            allCopiedDesc: "All contact info has been copied.",
         },
         placeholder: {
             /** Project search placeholder */
@@ -109,15 +128,16 @@ export const TRANSLATIONS = {
             detailBtn: "Detail",
             copiedBtn: "Copied",
             copyLinkBtn: "Copy link",
-            downloadBtn: "Download"
+            downloadBtn: "Download",
+            copyAllBtn: "Copy all",
         },
         resume: {
             cvTitle: "Resume",
             cvGuide: "Preview below, or download / share the file."
         },
-        toast: {
-            copiedSuccess: "Copied link to clipboard",
-            copiedFail: "Couldn't copy link"
+        switch: {
+            lang: "Language",
+            theme: "Theme"
         }
     },
 } as const;
