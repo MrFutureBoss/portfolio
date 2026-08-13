@@ -30,6 +30,7 @@ import { AnimatedThemeToggler } from "../../../components/ui/animated-theme-togg
 import { useTheme } from "next-themes";
 import { ResumeDialog } from "../resume-dialog";
 import { cn } from "@/shared/lib/utils";
+import SharePortfolio from "../share-portfolio";
 
 export default function HomeHeader() {
   const { lang, setLang } = useLanguage();
@@ -91,7 +92,7 @@ export default function HomeHeader() {
           </div>
           <div className="hidden items-center gap-6 md:flex">
             <Separator orientation="vertical" className="h-6" />
-
+            <SharePortfolio/>
             <Button asChild size="sm" onClick={() => setResumeOpen(true)}>
               <div className="cursor-pointer">{t.header.viewCv}</div>
             </Button>
@@ -183,6 +184,8 @@ export default function HomeHeader() {
                 </nav>
 
                 <Separator />
+
+                <SharePortfolio/>
 
                 {/* Nút xem CV */}
                 <SheetClose asChild>

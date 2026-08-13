@@ -61,6 +61,7 @@ export const TRANSLATIONS = {
             copyLinkBtn: "Sao chép link",
             downloadBtn: "Tải xuống",
             copyAllBtn: "Sao chép tất cả",
+            shareLinkBtn: "Chia sẻ link web"
         },
         resume: {
             cvTitle: "Xem sơ yếu lý lịch",
@@ -130,6 +131,7 @@ export const TRANSLATIONS = {
             copyLinkBtn: "Copy link",
             downloadBtn: "Download",
             copyAllBtn: "Copy all",
+            shareLinkBtn: "Share Web Link"
         },
         resume: {
             cvTitle: "Resume",
