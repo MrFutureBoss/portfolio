@@ -4,33 +4,18 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/components/providers/language-provider";
+import { TRANSLATIONS } from "@/lib/i18n";
 
-const CONTACT_CONTENT = {
-  vi: {
-    contactTitle: "Thông tin liên hệ",
-    addressLabel: "Địa chỉ",
-    addressDetail: "180 Phố Vọng, phường Tương Mai, tp Hà Nội",
-    emailLabel: "Email",
-    phoneLabel: "Số điện thoại",
-  },
-  en: {
-    contactTitle: "Contact information",
-    addressLabel: "Address",
-    addressDetail: "180 Phố Vọng, phường Tương Mai, tp Hà Nội",
-    emailLabel: "Email",
-    phoneLabel: "Phone",
-  },
-} as const;
 
 export default function ContactInfo() {
   const { lang } = useLanguage();
-  const t = CONTACT_CONTENT[lang];
+  const t = TRANSLATIONS[lang];
 
   return (
     <Card className="mt-2 w-full max-w-sm shrink-0 md:mt-0">
-      <CardHeader className="pb-3">
+      <CardHeader>
         <CardTitle className="text-base font-semibold">
-          {t.contactTitle}
+          {t.contact.contactTitle}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-3 text-sm">
@@ -39,9 +24,9 @@ export default function ContactInfo() {
             <MapPin className="h-4 w-4" />
           </div>
           <div className="space-y-0.5">
-            <p className="font-medium">{t.addressLabel}</p>
+            <p className="font-medium">{t.contact.addressLabel}</p>
             <p className="text-xs text-muted-foreground">
-              {t.addressDetail}
+              {t.contact.addressDetail}
             </p>
           </div>
         </div>
@@ -51,7 +36,7 @@ export default function ContactInfo() {
             <Mail className="h-4 w-4" />
           </div>
           <div className="space-y-0.5">
-            <p className="font-medium">{t.emailLabel}</p>
+            <p className="font-medium">{t.contact.emailLabel}</p>
             <a
               href="mailto:maitu10e2@gmail.com"
               className="text-xs text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
@@ -66,7 +51,7 @@ export default function ContactInfo() {
             <Phone className="h-4 w-4" />
           </div>
           <div className="space-y-0.5">
-            <p className="font-medium">{t.phoneLabel}</p>
+            <p className="font-medium">{t.contact.phoneLabel}</p>
             <a
               href="tel:0345919996"
               className="text-xs text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"

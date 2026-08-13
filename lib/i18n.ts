@@ -1,0 +1,103 @@
+// lib/i18n.ts
+// Toàn bộ text hiển thị theo ngôn ngữ, dùng chung cho cả site
+
+export const TRANSLATIONS = {
+    vi: {
+        nav: {
+            about: "Giới thiệu",
+            projects: "Dự án",
+            skills: "Kỹ năng",
+            contact: "Liên hệ",
+        },
+        header: {
+            name: "Mai Tu",
+            role: "Frontend Developer",
+            viewCv: "Xem CV",
+            contact: "Liên hệ",
+        },
+        contact: {
+            contactTitle: "Thông tin liên hệ",
+            addressLabel: "Địa chỉ",
+            addressDetail: "180 Phố Vọng, phường Tương Mai, tp Hà Nội",
+            emailLabel: "Email",
+            phoneLabel: "Số điện thoại",
+        },
+        about: {
+            badge: "Giới thiệu",
+            headingPrefix: "Xin chào, mình là",
+            study: "Đại học FPT, ngành Công nghệ thông tin",
+            born: "Sinh năm",
+            description: "Mình tập trung vào việc xây dựng các sản phẩm web hiện đại, dễ dùng và có trải nghiệm người dùng tốt.",
+        },
+        copy: {
+            mailCopiedDesciption: "đã được sao chép.",
+            mailCopied: "Đã sao chép mail!",
+            mailCopiedFail: "Sao chép mail thất bại!",
+        },
+        placeholder: {
+            /** Project search placeholder */
+            prjSearch: "Tìm tên dự án...",
+            /** Project filter type */
+            prjFType: "Thể loại",
+            /** Project filter time */
+            prjFTime: "Thời gian"
+        },
+        notFound: {
+            /** Project Search not found */
+            prjSrchNF: "Không tìm thấy dự án phù hợp.",
+        },
+        button: {
+            detailBtn: "Chi tiết"
+        }
+    },
+    en: {
+        nav: {
+            about: "About",
+            projects: "Projects",
+            skills: "Skills",
+            contact: "Contact",
+        },
+        header: {
+            name: "Mai Tu",
+            role: "Frontend Developer",
+            viewCv: "View CV",
+            contact: "Contact",
+        },
+        contact: {
+            contactTitle: "Contact information",
+            addressLabel: "Address",
+            addressDetail: "180 Phố Vọng, phường Tương Mai, tp Hà Nội",
+            emailLabel: "Email",
+            phoneLabel: "Phone",
+        },
+        about: {
+            badge: "About me",
+            headingPrefix: "Hi, I'm",
+            study: "FPT University, Information Technology major",
+            born: "Born in",
+            description: "I focus on building modern, user-friendly web products with great user experience.",
+        },
+        copy: {
+            mailCopiedDesciption: "has been copied to your clipboard.",
+            mailCopied: "Mail copied!",
+            mailCopiedFail: "Failed to copy email!",
+        },
+        placeholder: {
+            /** Project search placeholder */
+            prjSearch: "Find project name...",
+            /** Project filter type */
+            prjFType: "Type",
+            /** Project filter time */
+            prjFTime: "Time"
+        },
+        notFound: {
+            /** Project Search not found */
+            prjSrchNF: "No projects found.",
+        },
+        button: {
+            detailBtn: "Detail"
+        }
+    },
+} as const;
+
+export type Lang = keyof typeof TRANSLATIONS;

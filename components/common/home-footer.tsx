@@ -1,13 +1,45 @@
+"use client"
+
 import Link from "next/link";
 
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Check, Github, Linkedin, Mail } from "lucide-react";
+import { toast } from "sonner";
+import { useState } from "react";
+import { TRANSLATIONS } from "@/lib/i18n";
+import { useLanguage } from "../providers/language-provider";
 
 const currentYear = new Date().getFullYear();
 
+const BIO = {
+  github: "https://github.com/MrFutureBoss",
+  linkedin: "",
+  mail: "mailto:maitu10e2@gmail.com"
+} as const
+
 export default function HomeFooter() {
+  const { lang } = useLanguage();
+  const t = TRANSLATIONS[lang];
+  const [copied, setCopied] = useState(false);
+  const handleCopyMail = async () => {
+    try {
+      await navigator.clipboard.writeText(BIO.mail);
+
+      setCopied(true);
+
+      toast.success(`${t.copy.mailCopied}`, {
+        description: `maitu10e2@gmail.com ${t.copy.mailCopiedDesciption}`,
+      });
+
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000); // 2 giây
+    } catch {
+      toast.error(`${t.copy.mailCopiedFail}`);
+    }
+  };
   return (
     <footer className="border-t bg-background/60">
       <div className="w-full space-y-5 py-6 px-4 sm:space-y-6 sm:py-8 sm:px-6">
@@ -30,7 +62,7 @@ export default function HomeFooter() {
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <Button asChild size="icon" variant="outline">
               <Link
-                href="https://github.com/your-username"
+                href={BIO.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -39,17 +71,28 @@ export default function HomeFooter() {
             </Button>
             <Button asChild size="icon" variant="outline">
               <Link
-                href="https://www.linkedin.com/in/your-username"
+                href={BIO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Linkedin className="h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild size="icon" variant="outline">
-              <Link href="mailto:you@example.com">
-                <Mail className="h-4 w-4" />
-              </Link>
+            <Button
+              size="icon"
+              variant="outline"
+              onClick={handleCopyMail}
+              disabled={copied}
+              aria-label={copied ? `${t.copy.mailCopied}` : "Copy mail"}
+              className="cursor-pointer"
+            >
+              <div>
+                {copied ? (
+                  <Check className="h-4 w-4 text-green-500" />
+                ) : (
+                  <Mail className="h-4 w-4" />
+                )}              
+                </div>
             </Button>
           </div>
         </div>
