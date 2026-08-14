@@ -28,7 +28,7 @@ export const TRANSLATIONS = {
         about: {
             badge: "Giới thiệu",
             headingPrefix: "Xin chào, mình là",
-            study: "Đại học FPT, ngành Công nghệ thông tin",
+            study: "Tốt nghiệp đại học FPT, ngành Công nghệ thông tin",
             born: "Sinh năm",
             description: "Mình tập trung vào việc xây dựng các sản phẩm web hiện đại, dễ dùng và có trải nghiệm người dùng tốt.",
         },
@@ -98,7 +98,7 @@ export const TRANSLATIONS = {
         about: {
             badge: "About me",
             headingPrefix: "Hi, I'm",
-            study: "FPT University, Information Technology major",
+            study: "Gradute from FPT University, Information Technology major",
             born: "Born in",
             description: "I focus on building modern, user-friendly web products with great user experience.",
         },

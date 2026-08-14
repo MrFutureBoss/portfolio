@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/shared/providers/language-provider";
 import { TRANSLATIONS } from "@/shared/lib/i18n";
 
-export default function AboutUs() {
+export default function AboutMe() {
   const { lang } = useLanguage();
   const t = TRANSLATIONS[lang];
 
@@ -18,8 +18,7 @@ export default function AboutUs() {
       </h1>
       <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
         {t.about.born}{" "}
-        <span className="font-medium text-foreground">23/08/2002</span>,{" "}
-        {lang === "vi" ? "hiện đang theo học tại " : "currently studying at "}
+        <span className="font-medium text-foreground">2002</span>,{" "}
         <span className="font-medium text-foreground">{t.about.study}</span>.{" "}
         {t.about.description}
       </p>
