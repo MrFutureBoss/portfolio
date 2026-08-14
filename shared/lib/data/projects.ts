@@ -28,19 +28,18 @@ export const PROJECT_CATEGORIES: Record<
 export const PROJECT_YEARS: Record<Lang, FilterOption<string>[]> = {
   vi: [
     { value: "all", label: "Mọi thời điểm" },
+    { value: "2026", label: "2026" },
     { value: "2025", label: "2025" },
     { value: "2024", label: "2024" },
-    { value: "2023", label: "2023" },
   ],
   en: [
     { value: "all", label: "All time" },
+    { value: "2026", label: "2026" },
     { value: "2025", label: "2025" },
     { value: "2024", label: "2024" },
-    { value: "2023", label: "2023" },
   ],
 };
 
-// TODO: thay bằng data thật, ảnh thumbnail để tạm path trong /public
 // Lưu ý: "name" và "tags" giữ nguyên giữa 2 ngôn ngữ (tên riêng / tên công nghệ không dịch),
 // chỉ "shortDescription" được dịch theo từng ngôn ngữ.
 export const PROJECTS: Record<Lang, Project[]> = {

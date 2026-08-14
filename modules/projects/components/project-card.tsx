@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, Eye } from "lucide-react";
+import { Calendar, Globe } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Project } from "@/shared/types/project";
@@ -75,7 +75,7 @@ export function ProjectCard({ project, onPreview }: ProjectCardProps) {
               size="sm"
               onClick={() => onPreview(project)}
             >
-              <Eye className="h-4 w-4" />
+              <Globe className="h-4 w-4" />
             </Button>
           )}
         </div>

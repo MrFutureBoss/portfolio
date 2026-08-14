@@ -6,8 +6,8 @@ export const TRANSLATIONS = {
         nav: {
             about: "Giới thiệu về tôi",
             experience: "Kinh nghiệm",
-            projects: "Dự án",
-            skills: "Kỹ năng",
+            projects: "Dự án cá nhân và Team",
+            skills: "Kỹ năng cụ thể",
         },
         header: {
             name: "Mai Tu",
@@ -70,14 +70,36 @@ export const TRANSLATIONS = {
         switch: {
             lang: "Ngôn ngữ",
             theme: "Giao diện"
+        },
+        education: {
+            sectionTitle: "Học vấn",
+            gpaLabel: "GPA",
+            scoreLabel: "Điểm tốt nghiệp",
+        },
+        certifications: {
+            sectionTitle: "Chứng chỉ",
+            viewBtn: "Xem chứng chỉ",
+        },
+        skills: {
+            sectionTitle: "Kỹ năng",
+            categories: {
+                ide: "Công cụ / IDE lập trình",
+                language: "Ngôn ngữ lập trình",
+                frontend: "Thư viện, framework & UI Front-end",
+                backend: "Framework Back-end",
+                database: "Cơ sở dữ liệu & Cache",
+                mobile: "Phát triển Mobile",
+                tools: "Công cụ khác",
+                testing: "Kiểm thử hiệu năng & chất lượng",
+            },
         }
     },
     en: {
         nav: {
             about: "About me",
             experience: "Experience",
-            projects: "Projects",
-            skills: "Skills",
+            projects: "Personal & team projects",
+            skills: "Skills detail",
         },
         header: {
             name: "Mai Tu",
@@ -140,6 +162,28 @@ export const TRANSLATIONS = {
         switch: {
             lang: "Language",
             theme: "Theme"
+        },
+        education: {
+            sectionTitle: "Education",
+            gpaLabel: "GPA",
+            scoreLabel: "End class",
+        },
+        certifications: {
+            sectionTitle: "Certifications",
+            viewBtn: "View certificate",
+        },
+        skills: {
+            sectionTitle: "Kỹ năng",
+            categories: {
+                ide: "Công cụ / IDE lập trình",
+                language: "Ngôn ngữ lập trình",
+                frontend: "Thư viện, framework & UI Front-end",
+                backend: "Framework Back-end",
+                database: "Cơ sở dữ liệu & Cache",
+                mobile: "Phát triển Mobile",
+                tools: "Công cụ khác",
+                testing: "Kiểm thử hiệu năng & chất lượng",
+            },
         }
     },
 } as const;
